@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.11.7/dist/viewer.min.css">
+
+  <style>
+    .no-sidebar .sidebar,
+    .no-sidebar .sidebar-toggle {
+      display: none !important;
+    }
+
+    .no-sidebar .content {
+      left: 0 !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 4,
+      coverpage: true,
+      themeColor: '#AB3B3A',
+      // 如果你没有正确加载 KaTeX，这一行先删掉
+      // plugins: [window.DocsifyKatex]
+
+      plugins: [
+        function (hook, vm) {
+          let viewer = null;
+
+          function updateSidebar() {
+            const path = vm.route.path || '/';
+            const shouldHide = path === '/StructNote';
+            document.body.classList.toggle('no-sidebar', shouldHide);
+          }
+
+          hook.doneEach(function () {
+            updateSidebar();
+
+            const container = document.querySelector('.markdown-section');
+            if (!container) return;
+
+            if (viewer) {
+              viewer.destroy();
+            }
+
+            viewer = new Viewer(container, {
+              inline: false,
+              button: true,
+              navbar: true,
+              title: true,
+              toolbar: true,
+              tooltip: true,
+              movable: true,
+              zoomable: true,
+              rotatable: false,
+              scalable: false,
+              transition: true,
+              fullscreen: true,
+              keyboard: true,
+              zoomOnTouch: true,
+              zoomOnWheel: true
+            });
+          });
+        }
+      ]
+      // name: 'CONTENTS'
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/viewerjs@1.11.7/dist/viewer.min.js"></script>
+</body>
+</html>
