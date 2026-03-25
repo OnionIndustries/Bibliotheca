@@ -1,17 +1,17 @@
 <!-- {docsify-ignore-sidebar} -->
-# StructNote
+# DragDone
 
 > **Think and plan at the same time.**  
 > **一邊思考，一邊規劃。**
 
-StructNote 是一款輕量化的互動式甘特圖規劃工具。  
+DragDone 是一款輕量化的互動式甘特圖規劃工具。  
 它介於專業項目管理軟件與一般筆記工具之間，幫助你用更直觀的方式，將想法整理成結構，並快速轉化為時間安排。
 
-StructNote is a lightweight interactive Gantt planning tool.  
+DragDone is a lightweight interactive Gantt planning tool.  
 It sits between complex project management software and ordinary note-taking apps, helping you turn ideas into clear structures and schedules in a more intuitive way.
 
 <p align="center">
-  <a href="https://github.com/liuhangyu1999/StructNote/releases/download/0.1.0/StructNote.0.1.0.exe">
+  <a href="https://github.com/OnionIndustries/DragDone/releases/download/0.1.1/DragDone.0.1.1.exe">
     <img src="https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge" />
   </a>
 </p>
@@ -22,9 +22,9 @@ It sits between complex project management software and ordinary note-taking app
 </p>
 
 ## 演示 Demo
-![StructNote Demo](ENGDEMOS\demo1.gif)
+![DragDone Demo](ENGDEMOS\demo1.gif)
 
-## 為什麼選擇StructNote？ Why StructNote? 
+## 為什麼選擇DragDone？ Why DragDone? 
 
 - **在思考中完成規劃，而不是先想完再安排。**  
   **Plan while thinking, instead of planning only after thinking is done.**
@@ -74,7 +74,7 @@ It sits between complex project management software and ordinary note-taking app
 - 一般筆記工具又太自由、缺少時間規劃能力  
 - 你希望在整理思路的同時，順手完成排期  
 
-那麼 StructNote 可能正適合你。
+那麼 DragDone 可能正適合你。
 
 If you feel that:
 
@@ -82,7 +82,7 @@ If you feel that:
 - note-taking tools are too loose and lack scheduling power,  
 - and you want to organize ideas and timelines in one flow,  
 
-then StructNote may be exactly for you.
+then DragDone may be exactly for you.
 
 ## 使用方式 How it works
 
@@ -169,7 +169,7 @@ A mobile version is planned for the future.
 Data is currently stored locally in the project folder you set.
 
 ## 想法與建議 Feedback
-歡迎提出建議與想法，幫助 StructNote 持續改進。
+歡迎提出建議與想法，幫助 DragDone 持續改進。
 Suggestions and feedback are always welcome.
-- [GitHub Issues](https://github.com/liuhangyu1999/StructNote/issues)
+- [GitHub Issues](https://github.com/OnionIndustries/DragDone/issues)
 
