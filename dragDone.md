@@ -10,7 +10,7 @@ DragDone 是一款輕量化的互動式甘特圖規劃工具。
 DragDone is a lightweight interactive Gantt planning tool.  
 It sits between complex project management software and ordinary note-taking apps, helping you turn ideas into clear structures and schedules in a more intuitive way.
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/OnionIndustries/DragDone/releases/download/0.1.1/DragDone.0.1.1.exe">
     <img src="https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge" />
   </a>
@@ -19,7 +19,24 @@ It sits between complex project management software and ordinary note-taking app
 <p align="center">
   <strong>Windows 版現已可用 / Available now for Windows</strong><br>
   輕量．直觀．本地優先 / Lightweight · Intuitive · Local-first
+</p> -->
+
+
+<p align="center">
+  <a id="download-link" href="https://github.com/OnionIndustries/DragDone/releases/latest/download/DragDone.0.1.1.exe">
+    <img src="https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge" />
+  </a>
 </p>
+
+<p align="center">
+  <span id="download-count">下載次數讀取中... / Loading download count...</span>
+</p>
+
+<p align="center">
+  <strong>Windows 版現已可用 / Available now for Windows</strong><br>
+  輕量．直觀．本地優先 / Lightweight · Intuitive · Local-first
+</p>
+
 
 ## 演示 Demo
 ![DragDone Demo](ENGDEMOS\demo1.gif)

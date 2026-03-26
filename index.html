@@ -23,7 +23,6 @@
 </head>
 <body>
   <div id="app"></div>
-
   <script>
     window.$docsify = {
       name: '',
@@ -78,9 +77,57 @@
       // name: 'CONTENTS'
     }
   </script>
-
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/viewerjs@1.11.7/dist/viewer.min.js"></script>
+  <script>
+  async function loadGithubDownloadCount() {
+    const owner = "OnionIndustries";
+    const repo = "DragDone";
+
+    try {
+      const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`, {
+        headers: {
+          "Accept": "application/vnd.github+json"
+        }
+      });
+
+      if (!res.ok) {
+        throw new Error("GitHub API request failed: " + res.status);
+      }
+
+      const data = await res.json();
+      const asset = (data.assets || []).find(a => a.name.endsWith(".exe"));
+
+      const countEl = document.getElementById("download-count");
+      const linkEl = document.getElementById("download-link");
+
+      if (!countEl || !linkEl) return;
+
+      if (!asset) {
+        countEl.textContent = "未找到安裝包 / Installer not found";
+        return;
+      }
+
+      countEl.textContent = `已下載 ${asset.download_count} 次 / Downloaded ${asset.download_count} times`;
+      linkEl.href = asset.browser_download_url;
+    } catch (err) {
+      const countEl = document.getElementById("download-count");
+      if (countEl) {
+        countEl.textContent = "下載次數讀取失敗 / Failed to load download count";
+      }
+      console.error(err);
+    }
+  }
+
+  window.$docsify = window.$docsify || {};
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat([
+    function (hook) {
+      hook.doneEach(function () {
+        loadGithubDownloadCount();
+      });
+    }
+  ]);
+</script>
 </body>
 </html>
